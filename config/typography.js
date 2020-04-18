@@ -1,7 +1,7 @@
 import Typography from 'typography';
 
 const typography = new Typography({
-  title: 'Gatsby Starter Portfolio Bella',
+  title: 'Frostvale',
   baseFontSize: '18px',
   baseLineHeight: 1.45,
   headerFontFamily: [

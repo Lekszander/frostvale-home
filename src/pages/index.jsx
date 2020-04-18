@@ -9,6 +9,7 @@ import GridItem from '../components/GridItem';
 import BeTheHero from '../images/be_the_hero.svg';
 import DataReport from '../images/data_report.svg';
 import MayTheForce from '../images/may_the_force.svg';
+import GatsbyImage from 'gatsby-image';
 
 const Header = styled.header`
   width: 100%;
@@ -145,89 +146,11 @@ const IndexPage = ({
 }) => (
   <Layout>
     <Header>
-      <Logo>Bella Inc.</Logo>
+      <Logo></Logo>
       <Hero justifyContent="center" alignItems="center" flexDirection="column">
-        <h1>
-          We design and develop <br /> noice web applications.
-        </h1>
-        <h3>Hi, Bella Inc., the human form of the 💯 Emoji.</h3>
+        <img src={'/logos/Complete.svg'} width="50%" height="auto" alt="Logo" />
       </Hero>
     </Header>
-    <Wrapper p={4} mb={[4, 4, 7]} mx="auto" justifyContent="space-between" flexWrap="wrap">
-      {edges.map(c => (
-        <GridItem
-          uid={c.node.uid}
-          key={c.node.uid}
-          image={c.node.data.header_image.localFile.childImageSharp.fluid}
-          alt={c.node.data.title.text}
-          title={c.node.data.title.text}
-          subtitle={c.node.data.subtitle.text}
-        />
-      ))}
-    </Wrapper>
-    <PrimaryBG>
-      <Wrapper flexDirection="column" p={4} mx="auto">
-        <Flex w={1} py={5} justifyContent="space-between" flexWrap="wrap">
-          <ServiceImage>
-            <img src={BeTheHero} alt="Be The Hero" />
-          </ServiceImage>
-          <ServiceText>
-            <h2>Be your own hero</h2>
-            <p>
-              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-              blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
-              ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is
-              a paradisematic country, in which roasted parts of sentences fly into your mouth.
-            </p>
-            <ul>
-              <li>Service Super</li>
-              <li>Great Offer</li>
-              <li>Item Wrap</li>
-            </ul>
-          </ServiceText>
-        </Flex>
-        <Flex w={1} py={5} justifyContent="space-between" flexDirection="row-reverse" flexWrap="wrap">
-          <ServiceImage>
-            <img src={DataReport} alt="Data Report" />
-          </ServiceImage>
-          <ServiceText>
-            <h2>We love charts!</h2>
-            <p>
-              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-              blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
-              ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
-            </p>
-            <ul>
-              <li>Service Super</li>
-              <li>Great Offer</li>
-              <li>Item Wrap</li>
-            </ul>
-          </ServiceText>
-        </Flex>
-        <Flex w={1} py={5} justifyContent="space-between" flexWrap="wrap">
-          <ServiceImage>
-            <img src={MayTheForce} alt="May the Force" />
-          </ServiceImage>
-          <ServiceText>
-            <h2>May the force be with you</h2>
-            <p>
-              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-              blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
-              ocean.
-            </p>
-            <ul>
-              <li>Service Super</li>
-              <li>Great Offer</li>
-            </ul>
-          </ServiceText>
-        </Flex>
-      </Wrapper>
-    </PrimaryBG>
-    <Contact px={4} py={6} justifyContent="center" alignItems="center" flexDirection="column">
-      <h1>Say hi!</h1>
-      <h3>contact@domain.com</h3>
-    </Contact>
-    <Footer />
   </Layout>
 );
 
